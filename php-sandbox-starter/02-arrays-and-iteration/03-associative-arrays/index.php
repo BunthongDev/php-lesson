@@ -1,5 +1,20 @@
 <?php
 $output = null;
+
+// user array data
+$user = [
+    "name" => "John",
+    "email"=> "jonh@gmail.com",
+    "password"=> "123456",
+    "hobbies"=> ['Game', 'Coding', 'Movie']
+];
+
+// add new value in array
+$user['address'] = '#290, 2011, Main LTD';
+$user ['university'] = 'Harvert Business School';
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -22,6 +37,14 @@ $output = null;
         <div class="bg-white rounded-lg shadow-md p-6 mt-6">
             <!-- Output -->
             <p class="text-xl"><?= $output ?></p>
+            <h2 class="text-xl font-semibold my-4">User Array: </h2>
+            <p>
+                <pre>
+                    <?php  
+                        print_r($user);
+                    ?>
+                </pre>
+            </p>
         </div>
     </div>
 </body>
